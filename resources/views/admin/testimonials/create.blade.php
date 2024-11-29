@@ -45,7 +45,9 @@
                     </div> 
 
                     <div class="flex items-center justify-end mt-4">
-            
+                        <a href="{{route('admin.testimonials.index')}}" class="font-bold py-4 mr-4 px-6 bg-red-500 text-white rounded-full">
+                            Cancel
+                        </a>
                         <button type="submit" class="font-bold py-4 px-6 bg-indigo-700 text-white rounded-full">
                             Add New Testimonial
                         </button>

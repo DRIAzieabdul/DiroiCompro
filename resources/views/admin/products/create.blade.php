@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+        <h2 class="font-semibold text-xl text-gray-400 leading-tight">
             {{ __('New Product') }}
         </h2>
     </x-slot>
@@ -20,7 +20,7 @@
                 <form method="POST" action="{{route('admin.products.store')}}" enctype="multipart/form-data"> 
                     @csrf
                     <div>
-                        <x-input-label for="name" :value="__('Name')" />
+                        <x-input-label for="name" :value="__('Name')"/>
                         <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
                         <x-input-error :messages="$errors->get('name')" class="mt-2" />
                     </div>
@@ -44,7 +44,9 @@
                     </div>
 
                     <div class="flex items-center justify-end mt-4">
-            
+                        <a href="{{route('admin.products.index')}}" class="font-bold py-4 mr-4 px-6 bg-red-500 text-white rounded-full">
+                            Cancel
+                        </a>
                         <button type="submit" class="font-bold py-4 px-6 bg-indigo-700 text-white rounded-full">
                             Add New Product
                         </button>
