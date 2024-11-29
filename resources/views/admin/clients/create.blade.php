@@ -44,7 +44,9 @@
                     </div> 
 
                     <div class="flex items-center justify-end mt-4">
-            
+                        <a href="{{route('admin.clients.index')}}" class="font-bold py-4 px-6 bg-red-500 mr-4 text-white rounded-full">
+                            Cancel
+                        </a>
                         <button type="submit" class="font-bold py-4 px-6 bg-indigo-700 text-white rounded-full">
                             Add New Client
                         </button>

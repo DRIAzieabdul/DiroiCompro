@@ -25,7 +25,7 @@ class FrontController extends Controller
         $products = Product::take(3)->get();
         $teams = OurTeam::take(9)->get();
         $testimonials = Testimonial::take(4)->get();
-        $clients = ProjectClient::take(10)->get();
+        $clients = ProjectClient::all();
         return view('front.index', compact('statistics','principles','products','teams','testimonials','hero_sections','clients'));
     }
 
