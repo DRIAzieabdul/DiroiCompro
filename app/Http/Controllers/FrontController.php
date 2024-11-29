@@ -10,6 +10,7 @@ use App\Models\HeroSection;
 use App\Models\OurPrinciple;
 use App\Models\OurTeam;
 use App\Models\Product;
+use App\Models\ProjectClient;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -24,7 +25,8 @@ class FrontController extends Controller
         $products = Product::take(3)->get();
         $teams = OurTeam::take(9)->get();
         $testimonials = Testimonial::take(4)->get();
-        return view('front.index', compact('statistics','principles','products','teams','testimonials','hero_sections'));
+        $clients = ProjectClient::take(10)->get();
+        return view('front.index', compact('statistics','principles','products','teams','testimonials','hero_sections','clients'));
     }
 
     public function team()
