@@ -48,8 +48,8 @@
     <h2 class="font-bold text-lg">Trusted by 500+ Top Leaders Worldwide</h2>
     <div class="logo-container flex flex-wrap gap-5 justify-center">
       @forelse ($clients as $client)
-          <div class="logo-card h-[68px] w-fit flex items-center shrink-0 border border-[#E8EAF2] rounded-[18px] p-4 gap-[10px] bg-white hover:border-cp-dark-blue transition-all duration-300">
-            <div class="overflow-hidden h-9">
+          <div class="logo-card h-[100px] w-[200px] flex items-center shrink-0 rounded-[18px] p-2 gap-[5px] bg-white hover:shadow-[0_10px_30px_0_#D1D4DF80] transition-all duration-300">
+            <div class="overflow-hidden h-full w-full">
               <img src="{{Storage::url($client->logo)}}" class="object-contain w-full h-full" alt="logo">
             </div>
           </div>
