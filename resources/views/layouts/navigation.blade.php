@@ -52,6 +52,10 @@
                         {{ __('Our Products') }}
                     </x-nav-link>
 
+                    <x-nav-link :href="route('admin.services.index')" :active="request()->routeIs('admin.services.index')">
+                        {{ __('Our Services') }}
+                    </x-nav-link>
+
                     <div class="hidden sm:flex sm:items-center sm:ms-6">
                         <x-dropdown align="right" width="48">
                             <x-slot name="trigger">

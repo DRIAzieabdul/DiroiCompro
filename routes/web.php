@@ -10,6 +10,7 @@ use App\Http\Controllers\OurTeamController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectClientController;
+use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\TestimonialController;
 use Illuminate\Support\Facades\Route;
 
@@ -35,6 +36,10 @@ Route::middleware('auth')->group(function () {
     
         Route::middleware('can:manage products')->group(function(){
             Route::resource('products', ProductController::class);
+        });
+
+        Route::middleware('can:manage services')->group(function(){
+            Route::resource('services', ServiceController::class);
         });
     
         Route::middleware('can:manage principles')->group(function(){
