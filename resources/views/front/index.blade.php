@@ -317,13 +317,13 @@
           <div class="flex flex-col gap-[30px] sm:w-[603px] shrink-0">
               <div class="flex flex-col p-5 rounded-2xl bg-white w-full">
                   <button class="accordion-button flex justify-between gap-1 items-center" data-accordion="accordion-faq-1">
-                      <span class="font-bold text-lg leading-[27px] text-left">Can installments be beneficial for both?</span>
+                      <span class="font-bold text-lg leading-[27px] text-left">Who is your target market?</span>
                       <div class="arrow w-9 h-9 flex shrink-0">
                           <img src="{{asset('assets/icons/arrow-circle-down.svg')}}" class="transition-all duration-300" alt="icon">
                       </div>
                   </button>
                   <div id="accordion-faq-1" class="accordion-content hide">
-                      <p class="leading-[30px] text-cp-light-grey pt-[14px]">We want to protect our and clients assets to the max level so that we chose the best one from Jakarta, Indonesia will also protect post building finished completed ahead one.</p>
+                      <p class="leading-[30px] text-cp-light-grey pt-[14px]">Our target market comprises small to medium-sized enterprises (SMEs) in the technology and retail sectors. Specifically, we focus on companies that are looking to enhance their operational efficiency and customer engagement through innovative IT solutions.</p>
                   </div>
               </div>
               <div class="flex flex-col p-5 rounded-2xl bg-white w-full">
