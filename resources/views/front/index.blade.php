@@ -72,26 +72,26 @@
       </div>
       <a href="{{route('front.appointment')}}" class="bg-cp-dark-carrot p-[14px_20px] w-fit rounded-xl font-bold text-white">Explore More</a>
     </div>
-    <div class="flex flex-wrap items-center gap-[30px] justify-center">
+    <div class="flex flex-wrap items-stretch gap-[30px] justify-center">
       
         @forelse ($principles as $principle)
-            <div class="card w-[356.67px] flex flex-col bg-white border border-[#E8EAF2] rounded-[20px] gap-[30px] overflow-hidden hover:border-cp-dark-carrot transition-all duration-300">
+            <div class="card w-[356.67px] flex flex-col bg-white border border-[#E8EAF2] rounded-[20px] overflow-hidden hover:border-cp-dark-carrot transition-all duration-300">
                 <div class="thumbnail h-[200px] flex shrink-0 overflow-hidden">
                 <img src="{{Storage::url($principle->thumbnail)}}" class="object-cover object-center w-full h-full" alt="thumbnails">
                 </div>
-                <div class="flex flex-col p-[0_30px_30px_30px] gap-5">
-                <div class="w-[55px] h-[55px] flex shrink-0 overflow-hidden">
+                <div class="flex flex-col p-[0_30px_30px_30px] gap-5 h-full">
+                <div class="w-[55px] h-[55px] flex shrink-0 overflow-hidden" style="margin-top: 15px;">
                     <img src="{{Storage::url($principle->icon)}}" class="w-full h-full object-contain" alt="icon">
                 </div>
-                <div class="flex flex-col gap-1">
-                    <p class="title font-bold text-xl leading-[30px]">
+                <div class="flex flex-col gap-1 flex-grow">
+                    <p class="title font-bold text-xl leading-[30px] min-h-[60px]">
                         {{$principle->name}}
                     </p>
-                    <p class="leading-[30px] text-cp-light-grey">
+                    <p class="leading-[30px] text-cp-light-grey min-h-[90px]">
                         {{$principle->subtitle}}
                     </p>
                 </div>
-                <a href="{{route('front.appointment')}}" class="font-semibold text-cp-dark-carrot">Learn More</a>
+                {{-- <a href="{{route('front.appointment')}}" class="font-semibold text-cp-dark-carrot mt-auto">Learn More</a> --}}
                 </div>
             </div>
         @empty
