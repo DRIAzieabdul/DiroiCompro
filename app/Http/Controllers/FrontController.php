@@ -35,22 +35,26 @@ class FrontController extends Controller
     {
         $statistics = CompanyStatistic::take(4)->get();
         $teams = OurTeam::take(9)->get();
-        return view('front.team', compact('teams','statistics'));
+        $services = Service::take(4)->get();
+        return view('front.team', compact('teams','statistics','services'));
     }
 
     public function about()
     {
         $statistics = CompanyStatistic::take(4)->get();
+        $clients = ProjectClient::all();
+        $services = Service::take(4)->get();
         $abouts = CompanyAbout::take(2)->get();
 
-        return view('front.about', compact('statistics','abouts'));
+        return view('front.about', compact('statistics','abouts','clients','services'));
     }
 
     public function appointment()
     {
         $testimonials = Testimonial::take(4)->get();
         $products = Product::take(15)->get();
-        return view('front.appointment', compact('testimonials','products'));
+        $clients = ProjectClient::all();    
+        return view('front.appointment', compact('testimonials','products','clients'));
     }
 
     public function appointment_store(StoreAppointmentRequest $request)

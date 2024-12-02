@@ -50,53 +50,23 @@
 </div>
 <div id="Clients" class="container max-w-[1130px] mx-auto flex flex-col justify-center text-center gap-5 mt-20">
   <h2 class="font-bold text-lg">Trusted by 500+ Top Leaders Worldwide</h2>
-  <div class="logo-container flex flex-wrap gap-5 justify-center">
-    <div class="logo-card h-[68px] w-fit flex items-center shrink-0 border border-[#E8EAF2] rounded-[18px] p-4 gap-[10px] bg-white hover:border-cp-dark-blue transition-all duration-300">
-      <div class="overflow-hidden h-9">
-        <img src="assets/logo/logo-54.svg" class="object-contain w-full h-full" alt="logo">
-      </div>
-    </div>
-    <div class="logo-card h-[68px] w-fit flex items-center shrink-0 border border-[#E8EAF2] rounded-[18px] p-4 gap-[10px] bg-white hover:border-cp-dark-blue transition-all duration-300">
-      <div class="overflow-hidden h-9">
-        <img src="assets/logo/logo-52.svg" class="object-contain w-full h-full" alt="logo">
-      </div>
-    </div>
-    <div class="logo-card h-[68px] w-fit flex items-center shrink-0 border border-[#E8EAF2] rounded-[18px] p-4 gap-[10px] bg-white hover:border-cp-dark-blue transition-all duration-300">
-      <div class="overflow-hidden h-9">
-        <img src="assets/logo/logo-55.svg" class="object-contain w-full h-full" alt="logo">
-      </div>
-    </div>
-    <div class="logo-card h-[68px] w-fit flex items-center shrink-0 border border-[#E8EAF2] rounded-[18px] p-4 gap-[10px] bg-white hover:border-cp-dark-blue transition-all duration-300">
-      <div class="overflow-hidden h-9">
-        <img src="assets/logo/logo-44.svg" class="object-contain w-full h-full" alt="logo">
-      </div>
-    </div>
-    <div class="logo-card h-[68px] w-fit flex items-center shrink-0 border border-[#E8EAF2] rounded-[18px] p-4 gap-[10px] bg-white hover:border-cp-dark-blue transition-all duration-300">
-      <div class="overflow-hidden h-9">
-        <img src="assets/logo/logo-51.svg" class="object-contain w-full h-full" alt="logo">
-      </div>
-    </div>
-    <div class="logo-card h-[68px] w-fit flex items-center shrink-0 border border-[#E8EAF2] rounded-[18px] p-4 gap-[10px] bg-white hover:border-cp-dark-blue transition-all duration-300">
-      <div class="overflow-hidden h-9">
-        <img src="assets/logo/logo-55.svg" class="object-contain w-full h-full" alt="logo">
-      </div>
-    </div>
-    <div class="logo-card h-[68px] w-fit flex items-center shrink-0 border border-[#E8EAF2] rounded-[18px] p-4 gap-[10px] bg-white hover:border-cp-dark-blue transition-all duration-300">
-      <div class="overflow-hidden h-9">
-        <img src="assets/logo/logo-52.svg" class="object-contain w-full h-full" alt="logo">
-      </div>
-    </div>
-    <div class="logo-card h-[68px] w-fit flex items-center shrink-0 border border-[#E8EAF2] rounded-[18px] p-4 gap-[10px] bg-white hover:border-cp-dark-blue transition-all duration-300">
-      <div class="overflow-hidden h-9">
-        <img src="assets/logo/logo-54.svg" class="object-contain w-full h-full" alt="logo">
-      </div>
-    </div>
-    <div class="logo-card h-[68px] w-fit flex items-center shrink-0 border border-[#E8EAF2] rounded-[18px] p-4 gap-[10px] bg-white hover:border-cp-dark-blue transition-all duration-300">
-      <div class="overflow-hidden h-9">
-        <img src="assets/logo/logo-51.svg" class="object-contain w-full h-full" alt="logo">
-      </div>
-    </div>
+  <div class="logo-container flex flex-wrap gap-5 justify-center max-h-[250px] overflow-hidden relative">
+    @forelse ($clients->take(8) as $client)
+        <div class="logo-card h-[100px] w-[200px] flex items-center shrink-0 rounded-[18px] p-2 gap-[5px] bg-white hover:shadow-[0_10px_30px_0_#D1D4DF80] transition-all duration-300">
+          <div class="overflow-hidden h-full w-full">
+            <img src="{{Storage::url($client->logo)}}" class="object-contain w-full h-full" alt="logo">
+          </div>
+        </div>
+    @empty
+        <P>Belum Ada Data Terbaru</P>
+    @endforelse
   </div>
+  
+  @if(count($clients) > 8)
+  <div class="text-center mt-4">
+    <a href="#" class="bg-cp-dark-carrot p-[14px_20px] w-fit rounded-xl font-bold text-white inline-block mt-10">View All Clients</a>
+  </div>
+  @endif
 </div>
 <div id="Stats" class="bg-cp-black w-full mt-20">
   <div class="container max-w-[1000px] mx-auto py-10">
@@ -131,33 +101,21 @@
     <a href="{{route('front.appointment')}}" class="bg-cp-dark-carrot p-[14px_20px] w-fit rounded-xl font-bold text-white">Explore More</a>
   </div>
   <div class="awards-card-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[30px] justify-center">
-    <div class="card bg-white flex flex-col h-full p-[30px] gap-[30px] rounded-[20px] border border-[#E8EAF2] hover:border-cp-dark-carrot transition-all duration-300">
-      <div class="w-[55px] h-[55px] flex shrink-0">
-        <img src="assets/icons/laptop.png" alt="icon">
+
+    @forelse ($services as $service)
+      <div class="card bg-white flex flex-col h-full p-[30px] gap-[30px] rounded-[20px] border border-[#E8EAF2] hover:border-cp-dark-carrot transition-all duration-300">
+        <div class="w-[55px] h-[55px] flex shrink-0">
+          <img src="{{Storage::url($service->logo)}}" alt="icon">
+        </div>
+        <hr class="border-[#E8EAF2]">
+        <p class="font-bold text-xl leading-[30px]">{{$service->name}}</p>
+        <hr class="border-[#E8EAF2]">
+        <p class="text-cp-light-grey">{{$service->subtitle}}</p>
       </div>
-      <hr class="border-[#E8EAF2]">
-      <p class="font-bold text-xl leading-[30px]">Web App Development</p>
-      <hr class="border-[#E8EAF2]">
-      <p class="text-cp-light-grey">Our Custom Web Development Services Include Both Front-End And Back-End Development.</p>
-    </div>
-    <div class="card bg-white flex flex-col h-full p-[30px] gap-[30px] rounded-[20px] border border-[#E8EAF2] hover:border-cp-dark-carrot transition-all duration-300">
-      <div class="w-[55px] h-[55px] flex shrink-0">
-        <img src="assets/icons/android.png" alt="icon">
-      </div>
-      <hr class="border-[#E8EAF2]">
-      <p class="font-bold text-xl leading-[30px]">Mobile App Development</p>
-      <hr class="border-[#E8EAF2]">
-      <p class="text-cp-light-grey">We Have Expertise In Creating Multi-Platform Mobile App Solutions For Both Android And IOS Devices.</p>
-    </div>
-    <div class="card bg-white flex flex-col h-full p-[30px] gap-[30px] rounded-[20px] border border-[#E8EAF2] hover:border-cp-dark-carrot transition-all duration-300">
-      <div class="w-[55px] h-[55px] flex shrink-0">
-        <img src="assets/icons/desktop.png" alt="icon">
-      </div>
-      <hr class="border-[#E8EAF2]">
-      <p class="font-bold text-xl leading-[30px]">Desktop App Development</p>
-      <hr class="border-[#E8EAF2]">
-      <p class="text-cp-light-grey">We Specialize In Cross-Platform Desktop Application Development For Windows, MacOS, And Linux. With Advanced Technologies.</p>
-    </div>
+    @empty
+      <P>Belum Ada Data Terbaru</P>
+    @endforelse
+    
     {{-- <div class="card bg-white flex flex-col h-full p-[30px] gap-[30px] rounded-[20px] border border-[#E8EAF2] hover:border-cp-dark-blue transition-all duration-300">
       <div class="w-[55px] h-[55px] flex shrink-0">
         <img src="assets/icons/desktop.png" alt="icon">

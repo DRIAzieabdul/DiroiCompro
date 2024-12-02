@@ -21,7 +21,7 @@
           <div class="w-6 h-6 flex shrink-0">
             <img src="assets/icons/world.png" alt="icon">
           </div>
-          <p class="text-cp-dark-carrot font-semibold">Jalan Edelweis, Ruko
+          <p class="text-cp-dark-carrot font-semibold">Edelweis Street,
             Crystal Commercial No.15,
             Summarecon Bandung,
             Kota Bandung 40296</p>
@@ -120,55 +120,25 @@
       <button type="submit" class="bg-cp-dark-carrot p-5 w-full rounded-xl hover:shadow-[0_12px_30px_0_#312ECB66] transition-all duration-300 font-bold text-white">Book Appointment</button>
     </form>
   </div>
-  <div id="Clients" class="container max-w-[1130px] mx-auto flex flex-col justify-center text-center gap-5 mt-20 relative z-10">
+  <div id="Clients" class="container max-w-[1130px] mx-auto flex flex-col justify-center text-center gap-5 mt-20">
     <h2 class="font-bold text-lg">Trusted by 500+ Top Leaders Worldwide</h2>
-    <div class="logo-container flex flex-wrap gap-5 justify-center">
-      <div class="logo-card h-[68px] w-fit flex items-center shrink-0 border border-[#E8EAF2] rounded-[18px] p-4 gap-[10px] bg-white hover:border-cp-dark-blue transition-all duration-300">
-        <div class="overflow-hidden h-9">
-          <img src="assets/logo/logo-54.svg" class="object-contain w-full h-full" alt="logo">
-        </div>
-      </div>
-      <div class="logo-card h-[68px] w-fit flex items-center shrink-0 border border-[#E8EAF2] rounded-[18px] p-4 gap-[10px] bg-white hover:border-cp-dark-blue transition-all duration-300">
-        <div class="overflow-hidden h-9">
-          <img src="assets/logo/logo-52.svg" class="object-contain w-full h-full" alt="logo">
-        </div>
-      </div>
-      <div class="logo-card h-[68px] w-fit flex items-center shrink-0 border border-[#E8EAF2] rounded-[18px] p-4 gap-[10px] bg-white hover:border-cp-dark-blue transition-all duration-300">
-        <div class="overflow-hidden h-9">
-          <img src="assets/logo/logo-55.svg" class="object-contain w-full h-full" alt="logo">
-        </div>
-      </div>
-      <div class="logo-card h-[68px] w-fit flex items-center shrink-0 border border-[#E8EAF2] rounded-[18px] p-4 gap-[10px] bg-white hover:border-cp-dark-blue transition-all duration-300">
-        <div class="overflow-hidden h-9">
-          <img src="assets/logo/logo-44.svg" class="object-contain w-full h-full" alt="logo">
-        </div>
-      </div>
-      <div class="logo-card h-[68px] w-fit flex items-center shrink-0 border border-[#E8EAF2] rounded-[18px] p-4 gap-[10px] bg-white hover:border-cp-dark-blue transition-all duration-300">
-        <div class="overflow-hidden h-9">
-          <img src="assets/logo/logo-51.svg" class="object-contain w-full h-full" alt="logo">
-        </div>
-      </div>
-      <div class="logo-card h-[68px] w-fit flex items-center shrink-0 border border-[#E8EAF2] rounded-[18px] p-4 gap-[10px] bg-white hover:border-cp-dark-blue transition-all duration-300">
-        <div class="overflow-hidden h-9">
-          <img src="assets/logo/logo-55.svg" class="object-contain w-full h-full" alt="logo">
-        </div>
-      </div>
-      <div class="logo-card h-[68px] w-fit flex items-center shrink-0 border border-[#E8EAF2] rounded-[18px] p-4 gap-[10px] bg-white hover:border-cp-dark-blue transition-all duration-300">
-        <div class="overflow-hidden h-9">
-          <img src="assets/logo/logo-52.svg" class="object-contain w-full h-full" alt="logo">
-        </div>
-      </div>
-      <div class="logo-card h-[68px] w-fit flex items-center shrink-0 border border-[#E8EAF2] rounded-[18px] p-4 gap-[10px] bg-white hover:border-cp-dark-blue transition-all duration-300">
-        <div class="overflow-hidden h-9">
-          <img src="assets/logo/logo-54.svg" class="object-contain w-full h-full" alt="logo">
-        </div>
-      </div>
-      <div class="logo-card h-[68px] w-fit flex items-center shrink-0 border border-[#E8EAF2] rounded-[18px] p-4 gap-[10px] bg-white hover:border-cp-dark-blue transition-all duration-300">
-        <div class="overflow-hidden h-9">
-          <img src="assets/logo/logo-51.svg" class="object-contain w-full h-full" alt="logo">
-        </div>
-      </div>
+    <div class="logo-container flex flex-wrap gap-5 justify-center max-h-[250px] overflow-hidden relative">
+      @forelse ($clients->take(8) as $client)
+          <div class="logo-card h-[100px] w-[200px] flex items-center shrink-0 rounded-[18px] p-2 gap-[5px] bg-white hover:shadow-[0_10px_30px_0_#D1D4DF80] transition-all duration-300">
+            <div class="overflow-hidden h-full w-full">
+              <img src="{{Storage::url($client->logo)}}" class="object-contain w-full h-full" alt="logo">
+            </div>
+          </div>
+      @empty
+          <P>Belum Ada Data Terbaru</P>
+      @endforelse
     </div>
+    
+    @if(count($clients) > 8)
+    <div class="text-center mt-4">
+      <a href="#" class="bg-cp-dark-carrot p-[14px_20px] w-fit rounded-xl font-bold text-white inline-block mt-10">View All Clients</a>
+    </div>
+    @endif
   </div>
   <div id="Testimonials" class="w-full flex flex-col gap-[50px] items-center mt-20">
     <div class="flex flex-col gap-[14px] items-center">
