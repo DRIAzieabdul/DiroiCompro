@@ -147,14 +147,14 @@
       <div class="flex flex-wrap gap-[50px]">
         <div class="flex flex-col w-[200px] gap-3">
           <p class="font-bold text-lg text-white">Products</p>
-          <a href="" class="text-cp-light-grey hover:text-white transition-all duration-300">General Contract</a>
-          <a href="" class="text-cp-light-grey hover:text-white transition-all duration-300">Building Assessment</a>
-          <a href="" class="text-cp-light-grey hover:text-white transition-all duration-300">3D Paper Builder</a>
-          <a href="" class="text-cp-light-grey hover:text-white transition-all duration-300">Legal Constructions</a>
+          <a href="" class="text-cp-light-grey hover:text-white transition-all duration-300">Web Development</a>
+          <a href="" class="text-cp-light-grey hover:text-white transition-all duration-300">Mobile Development</a>
+          <a href="" class="text-cp-light-grey hover:text-white transition-all duration-300">UI/UX Design</a>
+          <a href="" class="text-cp-light-grey hover:text-white transition-all duration-300">SEO Optimization</a>
         </div>
         <div class="flex flex-col w-[200px] gap-3">
           <p class="font-bold text-lg text-white">About</p>
-          <a href="" class="text-cp-light-grey hover:text-white transition-all duration-300">We’re Hiring</a>
+          <a href="" class="text-cp-light-grey hover:text-white transition-all duration-300">Our Team</a>
           <a href="" class="text-cp-light-grey hover:text-white transition-all duration-300">Our Big Purposes</a>
           <a href="" class="text-cp-light-grey hover:text-white transition-all duration-300">Investor Relations</a>
           <a href="" class="text-cp-light-grey hover:text-white transition-all duration-300">Media Press</a>

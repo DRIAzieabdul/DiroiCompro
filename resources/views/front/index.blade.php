@@ -334,18 +334,18 @@
                       </div>
                   </button>
                   <div id="accordion-faq-2" class="accordion-content hide">
-                      <p class="leading-[30px] text-cp-light-grey pt-[14px]">We want to protect our and clients assets to the max level so that we chose the best one from Jakarta, Indonesia will also protect post building finished completed ahead one.</p>
+                      <p class="leading-[30px] text-cp-light-grey pt-[14px]">We use Laravel, a popular PHP framework, for our web development projects. Laravel is known for its robust features, ease of use, and powerful tools that help us build scalable and efficient web applications.</p>
                   </div>
               </div>
               <div class="flex flex-col p-5 rounded-2xl bg-white w-full">
                   <button class="accordion-button flex justify-between gap-1 items-center" data-accordion="accordion-faq-3">
-                      <span class="font-bold text-lg leading-[27px] text-left">What insurance provider do you use?</span>
+                      <span class="font-bold text-lg leading-[27px] text-left">What are your office hours?</span>
                       <div class="arrow w-9 h-9 flex shrink-0">
                           <img src="{{asset('assets/icons/arrow-circle-down.svg')}}" class="transition-all duration-300" alt="icon">
                       </div>
                   </button>
                   <div id="accordion-faq-3" class="accordion-content hide">
-                      <p class="leading-[30px] text-cp-light-grey pt-[14px]">We want to protect our and clients assets to the max level so that we chose the best one from Jakarta, Indonesia will also protect post building finished completed ahead one.</p>
+                      <p class="leading-[30px] text-cp-light-grey pt-[14px]">Our office hours are from Monday to Friday, 8:00 AM to 5:00 PM.</p>
                   </div>
               </div>
               <div class="flex flex-col p-5 rounded-2xl bg-white w-full">
@@ -356,7 +356,7 @@
                       </div>
                   </button>
                   <div id="accordion-faq-4" class="accordion-content hide">
-                      <p class="leading-[30px] text-cp-light-grey pt-[14px]">We want to protect our and clients assets to the max level so that we chose the best one from Jakarta, Indonesia will also protect post building finished completed ahead one.</p>
+                      <p class="leading-[30px] text-cp-light-grey pt-[14px]">You can contact us via email at info@diroi.co.id or use the contact form on our website. We will respond to your questions and inquiries as soon as possible.</p>
                   </div>
               </div>
           </div>
@@ -401,14 +401,14 @@
       <div class="flex flex-wrap gap-[50px]">
         <div class="flex flex-col w-[200px] gap-3">
           <p class="font-bold text-lg text-white">Products</p>
-          <a href="" class="text-cp-light-grey hover:text-white transition-all duration-300">General Contract</a>
-          <a href="" class="text-cp-light-grey hover:text-white transition-all duration-300">Building Assessment</a>
-          <a href="" class="text-cp-light-grey hover:text-white transition-all duration-300">3D Paper Builder</a>
-          <a href="" class="text-cp-light-grey hover:text-white transition-all duration-300">Legal Constructions</a>
+          <a href="" class="text-cp-light-grey hover:text-white transition-all duration-300">Web Development</a>
+          <a href="" class="text-cp-light-grey hover:text-white transition-all duration-300">Mobile Development</a>
+          <a href="" class="text-cp-light-grey hover:text-white transition-all duration-300">UI/UX Design</a>
+          <a href="" class="text-cp-light-grey hover:text-white transition-all duration-300">SEO Optimization</a>
         </div>
         <div class="flex flex-col w-[200px] gap-3">
           <p class="font-bold text-lg text-white">About</p>
-          <a href="" class="text-cp-light-grey hover:text-white transition-all duration-300">We’re Hiring</a>
+          <a href="" class="text-cp-light-grey hover:text-white transition-all duration-300">Our Team</a>
           <a href="" class="text-cp-light-grey hover:text-white transition-all duration-300">Our Big Purposes</a>
           <a href="" class="text-cp-light-grey hover:text-white transition-all duration-300">Investor Relations</a>
           <a href="" class="text-cp-light-grey hover:text-white transition-all duration-300">Media Press</a>
