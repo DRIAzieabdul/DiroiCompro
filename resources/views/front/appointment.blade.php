@@ -24,7 +24,7 @@
           <p class="text-cp-dark-carrot font-semibold">Edelweis Street,
             Crystal Commercial No.15,
             Summarecon Bandung,
-            Kota Bandung 40296</p>
+            Bandung 40296</p>
         </div>
         <div class="flex items-center gap-[10px]">
           <div class="w-6 h-6 flex shrink-0">
